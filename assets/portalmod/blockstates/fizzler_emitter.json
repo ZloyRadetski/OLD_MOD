@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "active=false,rotated=false,half=lower,facing=up":   {"model": "portalmod:block/fizzler_emitter_closed", "x": 270, "y": 180},
+    "active=false,rotated=false,half=lower,facing=down": {"model": "portalmod:block/fizzler_emitter_closed", "x": 90, "y": 0},
+    "active=false,rotated=false,half=upper,facing=up":   {"model": "portalmod:block/fizzler_emitter_closed", "x": 270, "y": 0},
+    "active=false,rotated=false,half=upper,facing=down": {"model": "portalmod:block/fizzler_emitter_closed", "x": 90, "y": 180},
+    "active=false,rotated=true,half=lower,facing=up":   {"model": "portalmod:block/fizzler_emitter_closed", "x": 270, "y": 90},
+    "active=false,rotated=true,half=lower,facing=down": {"model": "portalmod:block/fizzler_emitter_closed", "x": 90, "y": 270},
+    "active=false,rotated=true,half=upper,facing=up":   {"model": "portalmod:block/fizzler_emitter_closed", "x": 270, "y": 270},
+    "active=false,rotated=true,half=upper,facing=down": {"model": "portalmod:block/fizzler_emitter_closed", "x": 90, "y": 90},
+
+    "active=true,rotated=false,half=lower,facing=up":   {"model": "portalmod:block/fizzler_emitter_open_bottom", "x": 270, "y": 0},
+    "active=true,rotated=false,half=lower,facing=down": {"model": "portalmod:block/fizzler_emitter_open_bottom", "x": 90, "y": 180},
+    "active=true,rotated=false,half=upper,facing=up":   {"model": "portalmod:block/fizzler_emitter_open_top", "x": 270, "y": 0},
+    "active=true,rotated=false,half=upper,facing=down": {"model": "portalmod:block/fizzler_emitter_open_top", "x": 90, "y": 180},
+    "active=true,rotated=true,half=lower,facing=up":    {"model": "portalmod:block/fizzler_emitter_open_bottom", "x": 270, "y": 270},
+    "active=true,rotated=true,half=lower,facing=down":  {"model": "portalmod:block/fizzler_emitter_open_bottom", "x": 90, "y": 90},
+    "active=true,rotated=true,half=upper,facing=up":    {"model": "portalmod:block/fizzler_emitter_open_top", "x": 270, "y": 270},
+    "active=true,rotated=true,half=upper,facing=down":  {"model": "portalmod:block/fizzler_emitter_open_top", "x": 90, "y": 90},
+
+    "active=false,rotated=false,half=lower,facing=north": {"model": "portalmod:block/fizzler_emitter_closed", "x": 180, "y": 180},
+    "active=false,rotated=false,half=lower,facing=east":  {"model": "portalmod:block/fizzler_emitter_closed", "x": 180, "y": 270},
+    "active=false,rotated=false,half=lower,facing=south": {"model": "portalmod:block/fizzler_emitter_closed", "x": 180, "y": 0},
+    "active=false,rotated=false,half=lower,facing=west":  {"model": "portalmod:block/fizzler_emitter_closed", "x": 180, "y": 90},
+    "active=false,rotated=false,half=upper,facing=north": {"model": "portalmod:block/fizzler_emitter_closed", "y": 0},
+    "active=false,rotated=false,half=upper,facing=east":  {"model": "portalmod:block/fizzler_emitter_closed", "y": 90},
+    "active=false,rotated=false,half=upper,facing=south": {"model": "portalmod:block/fizzler_emitter_closed", "y": 180},
+    "active=false,rotated=false,half=upper,facing=west":  {"model": "portalmod:block/fizzler_emitter_closed", "y": 270},
+
+    "active=false,rotated=true,half=lower,facing=north": {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "y": 0},
+    "active=false,rotated=true,half=lower,facing=east":  {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "y": 90},
+    "active=false,rotated=true,half=lower,facing=south": {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "x": 180, "y": 0},
+    "active=false,rotated=true,half=lower,facing=west":  {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "x": 180, "y": 90},
+    "active=false,rotated=true,half=upper,facing=north": {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "x": 180, "y": 180},
+    "active=false,rotated=true,half=upper,facing=east":  {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "x": 180, "y": 270},
+    "active=false,rotated=true,half=upper,facing=south": {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "y": 180},
+    "active=false,rotated=true,half=upper,facing=west":  {"model": "portalmod:block/fizzler_emitter_closed_horizontal", "y": 270},
+
+    "active=true,rotated=false,half=lower,facing=north": {"model": "portalmod:block/fizzler_emitter_open_bottom", "y": 0},
+    "active=true,rotated=false,half=lower,facing=east":  {"model": "portalmod:block/fizzler_emitter_open_bottom", "y": 90},
+    "active=true,rotated=false,half=lower,facing=south": {"model": "portalmod:block/fizzler_emitter_open_bottom", "y": 180},
+    "active=true,rotated=false,half=lower,facing=west":  {"model": "portalmod:block/fizzler_emitter_open_bottom", "y": 270},
+    "active=true,rotated=false,half=upper,facing=north": {"model": "portalmod:block/fizzler_emitter_open_top", "y": 0},
+    "active=true,rotated=false,half=upper,facing=east":  {"model": "portalmod:block/fizzler_emitter_open_top", "y": 90},
+    "active=true,rotated=false,half=upper,facing=south": {"model": "portalmod:block/fizzler_emitter_open_top", "y": 180},
+    "active=true,rotated=false,half=upper,facing=west":  {"model": "portalmod:block/fizzler_emitter_open_top", "y": 270},
+
+    "active=true,rotated=true,half=lower,facing=north": {"model": "portalmod:block/fizzler_emitter_open_bottom_horizontal", "x": 180, "y": 180},
+    "active=true,rotated=true,half=lower,facing=east":  {"model": "portalmod:block/fizzler_emitter_open_bottom_horizontal", "x": 180, "y": 270},
+    "active=true,rotated=true,half=lower,facing=south": {"model": "portalmod:block/fizzler_emitter_open_bottom_horizontal", "y": 180},
+    "active=true,rotated=true,half=lower,facing=west":  {"model": "portalmod:block/fizzler_emitter_open_bottom_horizontal", "y": 270},
+    "active=true,rotated=true,half=upper,facing=north": {"model": "portalmod:block/fizzler_emitter_open_top_horizontal", "x": 180, "y": 180},
+    "active=true,rotated=true,half=upper,facing=east":  {"model": "portalmod:block/fizzler_emitter_open_top_horizontal", "x": 180, "y": 270},
+    "active=true,rotated=true,half=upper,facing=south": {"model": "portalmod:block/fizzler_emitter_open_top_horizontal", "y": 180},
+    "active=true,rotated=true,half=upper,facing=west":  {"model": "portalmod:block/fizzler_emitter_open_top_horizontal", "y": 270}
+  }
+}

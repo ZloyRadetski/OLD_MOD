@@ -1,0 +1,33 @@
+{
+  "parent": "portalmod:portalmod/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "block": "portalmod:forest_cake",
+            "powered": {
+              "powered": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "portalmod:forest_cake"
+    },
+    "title": {
+      "translate": "advancements.portalmod.eat_forest_cake.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.eat_forest_cake.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

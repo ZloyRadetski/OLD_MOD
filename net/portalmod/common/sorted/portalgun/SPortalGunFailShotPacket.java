@@ -1,0 +1,57 @@
+package net.portalmod.common.sorted.portalgun;
+
+import java.nio.charset.StandardCharsets;
+import java.util.function.Supplier;
+import net.minecraft.network.PacketBuffer;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.network.NetworkEvent;
+import net.portalmod.core.math.Vec3;
+import net.portalmod.core.packet.AbstractPacket;
+import net.portalmod.core.packet.ClientPacketHandler;
+
+public class SPortalGunFailShotPacket implements AbstractPacket<SPortalGunFailShotPacket> {
+   public Vec3 position;
+   public Vec3 normal;
+   public Vec3 upVector;
+   public String dyeColor;
+
+   public SPortalGunFailShotPacket() {
+   }
+
+   public SPortalGunFailShotPacket(Vec3 position, Vec3 normal, Vec3 upVector, String dyeColor) {
+      this.position = position;
+      this.normal = normal;
+      this.upVector = upVector;
+      this.dyeColor = dyeColor;
+   }
+
+   public void encode(PacketBuffer buffer) {
+      buffer.writeFloat((float)this.position.x);
+      buffer.writeFloat((float)this.position.y);
+      buffer.writeFloat((float)this.position.z);
+      buffer.writeFloat((float)this.normal.x);
+      buffer.writeFloat((float)this.normal.y);
+      buffer.writeFloat((float)this.normal.z);
+      buffer.writeFloat((float)this.upVector.x);
+      buffer.writeFloat((float)this.upVector.y);
+      buffer.writeFloat((float)this.upVector.z);
+      buffer.writeInt(this.dyeColor.length());
+      buffer.writeCharSequence(this.dyeColor, StandardCharsets.UTF_8);
+   }
+
+   public SPortalGunFailShotPacket decode(PacketBuffer buffer) {
+      Vec3 position = new Vec3((double)buffer.readFloat(), (double)buffer.readFloat(), (double)buffer.readFloat());
+      Vec3 normal = new Vec3((double)buffer.readFloat(), (double)buffer.readFloat(), (double)buffer.readFloat());
+      Vec3 upVector = new Vec3((double)buffer.readFloat(), (double)buffer.readFloat(), (double)buffer.readFloat());
+      int length = buffer.readInt();
+      String dyeColor = buffer.readCharSequence(length, StandardCharsets.UTF_8).toString();
+      return new SPortalGunFailShotPacket(position, normal, upVector, dyeColor);
+   }
+
+   public boolean handle(Supplier<NetworkEvent.Context> context) {
+      ((NetworkEvent.Context)context.get()).enqueueWork(() -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientPacketHandler.handleSPortalGunFailShotPacket(this)));
+      ((NetworkEvent.Context)context.get()).setPacketHandled(true);
+      return true;
+   }
+}

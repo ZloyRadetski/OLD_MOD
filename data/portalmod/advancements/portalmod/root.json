@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "requirement": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crafting_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "portalmod:radio"
+    },
+    "title": {
+      "translate": "advancements.portalmod.root.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.root.description"
+    },
+    "background": "portalmod:textures/gui/advancements/backgrounds/portal.png",
+    "frame": "task",
+    "announce_to_chat": false,
+    "show_toast": false,
+    "hidden": false
+  }
+}

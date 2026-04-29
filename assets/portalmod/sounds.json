@@ -1,0 +1,243 @@
+{
+    "block.radio.loop": {
+        "sounds": [
+            "portalmod:block/radio/loop"
+        ],
+        "subtitle": "subtitles.block.radio.loop"
+    },
+    "block.radio.transmission": {
+        "sounds": [
+            "portalmod:block/radio/dinosaur1"
+        ],
+        "subtitle": "subtitles.block.radio.transmission"
+    },
+    "item.bucket.empty_goo": {
+      "sounds": [
+        "portalmod:block/goo/place1",
+        "portalmod:block/goo/place2",
+        "portalmod:block/goo/place3"
+      ],
+      "subtitle": "subtitles.item.bucket.empty"
+    },
+    "item.bucket.fill_goo": {
+        "sounds": [
+            "portalmod:block/goo/place1",
+            "portalmod:block/goo/place2",
+            "portalmod:block/goo/place3"
+        ],
+      "subtitle": "subtitles.item.bucket.fill"
+    },
+
+
+
+
+
+    "block.chamber_door.open": {
+        "sounds": [ "portalmod:block/chamber_door/open" ],
+        "subtitle": "subtitles.block.chamber_door.open" },
+    "block.chamber_door.close": {
+        "sounds": [ "portalmod:block/chamber_door/close" ],
+        "subtitle": "subtitles.block.chamber_door.close" },
+
+    "block.chamber_lights.hum": {
+        "sounds": [ "portalmod:block/chamber_lights/hum" ],
+        "subtitle": "subtitles.block.chamber_lights.hum",
+        "volume":  0.3 },
+
+    "block.chamber_lights.flicker": {
+        "sounds": [
+            "portalmod:block/chamber_lights/flicker0",
+            "portalmod:block/chamber_lights/flicker1"
+        ],
+        "subtitle": "subtitles.block.chamber_lights.flicker" },
+
+    "block.push_door.open": {
+        "sounds": [ "portalmod:block/push_door/open" ],
+        "subtitle": "subtitles.block.push_door.open" },
+    "block.push_door.close": {
+        "sounds": [ "portalmod:block/push_door/close" ],
+        "subtitle": "subtitles.block.push_door.close" },
+
+    "block.button.activate": {
+        "sounds": [ "portalmod:block/super_button/activate" ],
+        "subtitle": "subtitles.block.button.activate" },
+    "block.button.deactivate": {
+        "sounds": [ "portalmod:block/super_button/deactivate" ],
+        "subtitle": "subtitles.block.button.deactivate" },
+    "block.super_button.press": {
+        "sounds": [ "portalmod:block/super_button/press" ],
+        "subtitle": "subtitles.block.super_button.press" },
+    "block.super_button.release": {
+        "sounds": [ "portalmod:block/super_button/release" ],
+        "subtitle": "subtitles.block.super_button.release" },
+
+    "block.fizzler_emitter.activate": {
+        "sounds": [ "portalmod:block/fizzler_emitter/activate" ],
+        "subtitle": "subtitles.block.fizzler_emitter.activate" },
+    "block.fizzler_emitter.deactivate": {
+        "sounds": [ "portalmod:block/fizzler_emitter/deactivate" ],
+        "subtitle": "subtitles.block.fizzler_emitter.deactivate" },
+
+    "block.antline_indicator.activate": {
+        "sounds": [ "portalmod:block/antline_indicator/activate" ],
+        "subtitle": "subtitles.block.antline_indicator.activate" },
+    "block.antline_indicator.deactivate": {
+        "sounds": [ "portalmod:block/antline_indicator/deactivate" ],
+        "subtitle": "subtitles.block.antline_indicator.deactivate" },
+    "block.antline_timer.tick": {
+        "sounds": [ "portalmod:block/antline_indicator/tick" ],
+        "subtitle": "subtitles.block.antline_timer.tick" },
+
+    "block.gel.place": {
+        "sounds": [
+            "portalmod:block/gel/place1",
+            "portalmod:block/gel/place2",
+            "portalmod:block/gel/place3"
+        ],
+        "subtitle": "subtitles.block.generic.place" },
+    "block.gel.break": {
+        "sounds": [
+            "portalmod:block/gel/break1",
+            "portalmod:block/gel/break2"
+        ],
+        "subtitle": "subtitles.block.generic.break" },
+    "block.gel.step": {
+        "sounds": [
+            "portalmod:block/gel/step1",
+            "portalmod:block/gel/step2"
+        ],
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.gel.collect": {
+        "sounds": [ "portalmod:block/gel/collect" ],
+        "subtitle": "subtitles.block.gel.collect"
+    },
+    "block.gel.bounce": {
+        "sounds": [ "portalmod:block/gel/bounce" ],
+        "subtitle": "subtitles.block.gel.bounce" },
+    "block.faithplate.launch": {
+        "sounds": [ "portalmod:block/faithplate/launch" ],
+        "subtitle": "subtitles.block.faithplate.launch"
+    },
+    "block.cube_dropper.open": {
+        "sounds": [ "portalmod:block/cube_dropper/open" ],
+        "subtitle": "subtitles.block.cube_dropper.open"
+    },
+    "block.cube_dropper.close": {
+        "sounds": [ "portalmod:block/cube_dropper/close" ],
+        "subtitle": "subtitles.block.cube_dropper.close"
+    },
+    "block.forest_cake.eat_candle": {
+        "sounds": [
+            { "name": "portalmod:block/forest_cake/eat_candle1", "pitch": 1.4 },
+            { "name": "portalmod:block/forest_cake/eat_candle2", "pitch": 1.4 },
+            { "name": "portalmod:block/forest_cake/eat_candle3", "pitch": 1.4 }
+        ],
+        "subtitle": "subtitles.block.forest_cake.eat_candle"
+    },
+
+    "entity.turret.fire": {
+        "sounds": [ "portalmod:entity/turret/fire" ],
+        "subtitle": "subtitles.entity.turret.fire"
+    },
+    "entity.turret.fire_fail": {
+        "sounds": [ "portalmod:entity/turret/fire_fail" ],
+        "subtitle": "subtitles.entity.turret.fire_fail"
+    },
+    "entity.turret.stock": {
+        "sounds": [ "item/armor/equip_chain1" ],
+        "subtitle": "subtitles.entity.turret.stock"
+    },
+    "entity.turret.open": {
+        "sounds": [ "portalmod:entity/turret/open" ],
+        "subtitle": "subtitles.entity.turret.open"
+    },
+    "entity.turret.close": {
+        "sounds": [ "portalmod:entity/turret/close" ],
+        "subtitle": "subtitles.entity.turret.close"
+    },
+    "entity.chamber_sign.place": {
+        "sounds": [
+            "portalmod:entity/chamber_sign/place1",
+            "portalmod:entity/chamber_sign/place2"
+        ],
+        "subtitle": "subtitles.entity.chamber_sign.place"
+    },
+    "entity.player.hurt_goo": {
+        "sounds": [
+            "portalmod:entity/player/hurt/goo_hurt1",
+            "portalmod:entity/player/hurt/goo_hurt2",
+            "portalmod:entity/player/hurt/goo_hurt3"
+        ],
+        "subtitle": "subtitles.entity.player.hurt"
+    },
+    "entity.fizzle": {
+        "sounds": [ "portalmod:entity/fizzle" ],
+        "subtitle": "subtitles.entity.fizzle" },
+    "entity.cube.hit": {
+        "sounds": [
+            "portalmod:entity/cube/hit1",
+            "portalmod:entity/cube/hit2",
+            "portalmod:entity/cube/hit3",
+            "portalmod:entity/cube/hit4"
+        ],
+        "subtitle": "subtitles.entity.cube.hit" },
+    "entity.cube.gabe": {
+        "sounds": [
+            "portalmod:entity/cube/gabe"
+        ],
+        "subtitle": "subtitles.entity.cube.gabe" },
+    "entity.portal.open": {
+        "sounds": [ "portalmod:entity/portal/open" ],
+        "subtitle": "subtitles.entity.portal.open" },
+    "entity.portal.close": {
+        "sounds": [ "portalmod:entity/portal/close" ],
+        "subtitle": "subtitles.entity.portal.close" },
+    "entity.portal.teleport": {
+        "sounds": [ "portalmod:entity/portal/teleport" ],
+        "subtitle": "subtitles.entity.portal.teleport" },
+    "item.portalgun.fire_primary": {
+        "sounds": [ "portalmod:item/portalgun/fire_primary" ],
+        "subtitle": "subtitles.item.portalgun.fire"
+    },
+    "item.portalgun.fire_secondary": {
+        "sounds": [ "portalmod:item/portalgun/fire_secondary" ],
+        "subtitle": "subtitles.item.portalgun.fire"
+    },
+    "item.portalgun.miss": {
+        "sounds": [ "portalmod:item/portalgun/miss" ],
+        "subtitle": "subtitles.item.portalgun.miss"
+    },
+    "item.portalgun.lift": {
+        "sounds": [ "portalmod:item/portalgun/lift" ]
+    },
+    "item.portalgun.drop": {
+        "sounds": [ "portalmod:item/portalgun/drop" ]
+    },
+    "item.portalgun.hold": {
+        "sounds": [ "portalmod:item/portalgun/hold" ],
+        "subtitle": "subtitles.item.portalgun.hold"
+    },
+    "item.portalgun.fizzle": {
+        "sounds": [ "portalmod:item/portalgun/fizzle" ],
+        "subtitle": "subtitles.item.portalgun.fizzle"
+    },
+    "item.wrench.use": {
+        "sounds": [
+            "portalmod:item/wrench/use1",
+            "portalmod:item/wrench/use2",
+            "portalmod:item/wrench/use3"
+        ],
+        "subtitle": "subtitles.item.wrench.use"
+    },
+    "item.wrench.fail": {
+        "sounds": [
+            "portalmod:item/wrench/fail"
+        ],
+        "subtitle": "subtitles.item.wrench.fail"
+    },
+
+    "disc.rain": {
+        "sounds": [ "portalmod:disc/rain" ]
+    }
+}

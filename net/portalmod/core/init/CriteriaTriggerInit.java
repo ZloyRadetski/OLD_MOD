@@ -1,0 +1,33 @@
+package net.portalmod.core.init;
+
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.criterion.AbstractCriterionTrigger;
+import net.portalmod.common.triggers.CodeBoundTrigger;
+import net.portalmod.core.util.Registry;
+
+public class CriteriaTriggerInit {
+   public static final Registry<AbstractCriterionTrigger<?>> REGISTRY = new Registry<AbstractCriterionTrigger<?>>();
+   public static final Registry.Entry<CodeBoundTrigger> SHOOT_MOON = registerCBT("shoot_moon");
+   public static final Registry.Entry<CodeBoundTrigger> FAITH_PLATE_ELYTRA = registerCBT("faith_plate_elytra");
+   public static final Registry.Entry<CodeBoundTrigger> TRIPLE_TELEPORT = registerCBT("triple_teleportation");
+   public static final Registry.Entry<CodeBoundTrigger> PLACE_PORTALS = registerCBT("place_portals");
+   public static final Registry.Entry<CodeBoundTrigger> PORTAL_SURFACE = registerCBT("portal_surface");
+   public static final Registry.Entry<CodeBoundTrigger> BOUNCE_ON_GEL = registerCBT("bounce_on_gel");
+   public static final Registry.Entry<CodeBoundTrigger> SHOOT_PORTAL_FAR = registerCBT("shoot_portal_far");
+   public static final Registry.Entry<CodeBoundTrigger> GRAB_ENTITY = registerCBT("grab_entity");
+   public static final Registry.Entry<CodeBoundTrigger> CUBE_ON_BUTTON = registerCBT("cube_on_button");
+   public static final Registry.Entry<CodeBoundTrigger> SURVIVE_TURRET = registerCBT("survive_turret");
+   public static final Registry.Entry<CodeBoundTrigger> TURRET_DEFENSE = registerCBT("turret_defense");
+
+   private CriteriaTriggerInit() {
+   }
+
+   private static <S extends AbstractCriterionTrigger<?>> S register(S trigger) {
+      CriteriaTriggers.func_192118_a(trigger);
+      return trigger;
+   }
+
+   private static Registry.Entry<CodeBoundTrigger> registerCBT(String name) {
+      return REGISTRY.<CodeBoundTrigger>register(name, () -> (CodeBoundTrigger)register(new CodeBoundTrigger(name)));
+   }
+}

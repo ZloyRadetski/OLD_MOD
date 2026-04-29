@@ -1,0 +1,28 @@
+{
+  "parent": "portalmod:portalmod/obtain_fall_boots",
+  "criteria": {
+    "condition_name": {
+      "trigger": "portalmod:faith_plate_elytra"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "portalmod:faithplate"
+    },
+    "title": {
+      "translate": "advancements.portalmod.faith_plate_elytra.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.faith_plate_elytra.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "condition_name"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "portalmod:portalmod/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "portalmod:place_portals",
+      "conditions": {
+        "player": {
+          "player": {
+            "stats": [
+              {
+                "type": "minecraft:custom",
+                "stat": "portalmod:portals_shot",
+                "value": {
+                  "min": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "portalmod:portalgun"
+    },
+    "title": {
+      "translate": "advancements.portalmod.place_portals.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.place_portals.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

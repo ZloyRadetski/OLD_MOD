@@ -1,0 +1,23 @@
+{
+  "parent": "portalmod:portalmod/root",
+  "criteria": {
+    "condition_name": {
+      "trigger": "portalmod:turret_defense"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "portalmod:turret"
+    },
+    "title": {
+      "translate": "advancements.portalmod.turret_defense.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.turret_defense.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

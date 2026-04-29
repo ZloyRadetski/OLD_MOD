@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: portalmod
+Specification-Vendor: SerialSniper, PhantomEye, LarsMans
+Specification-Version: 1
+Implementation-Title: PortalMod
+Implementation-Version: 1.2
+Implementation-Vendor: SerialSniper, PhantomEye, LarsMans
+Implementation-Timestamp: 2026-04-25T00:48:02+0200
+MixinConfigs: portalmod.mixins.json
+

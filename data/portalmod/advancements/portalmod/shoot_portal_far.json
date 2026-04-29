@@ -1,0 +1,23 @@
+{
+  "parent": "portalmod:portalmod/portal_surface",
+  "criteria": {
+    "requirement": {
+      "trigger": "portalmod:shoot_portal_far"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "minecraft:target"
+    },
+    "title": {
+      "translate": "advancements.portalmod.shoot_portal_far.title"
+    },
+    "description": {
+      "translate": "advancements.portalmod.shoot_portal_far.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

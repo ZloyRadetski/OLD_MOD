@@ -1,0 +1,21 @@
+{
+	"textures": {
+		"middle":   "portalmod:block/chamber_door_middle_bottom_sign",
+		"side":     "portalmod:block/chamber_door_side_bottom",
+		"sign":     "portalmod:block/chamber_door_side_bottom_sign",
+		"bottom":   "portalmod:block/chamber_door_bottom_sign",
+		"particle": "portalmod:block/chamber_door_side_bottom"
+	},
+	"elements": [
+		{
+			"from": [ 0,  0,  5],
+			"to":   [14, 16, 11],
+			"faces": {
+				"north": {"uv": [ 2,  0, 16, 16], "texture": "#side"},
+				"south": {"uv": [16,  0,  2, 16], "texture": "#sign"},
+				"west":  {"uv": [ 5,  0, 11, 16], "texture": "#middle", "cullface": "west"},
+				"down":  {"uv": [16,  5,  2, 11], "texture": "#bottom"}
+			}
+		}
+	]
+}

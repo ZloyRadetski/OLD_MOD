@@ -1,0 +1,124 @@
+package net.portalmod.core.math;
+
+import com.google.common.collect.Lists;
+import java.util.List;
+import java.util.Optional;
+import java.util.Stack;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import javax.annotation.Nullable;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Direction.Axis;
+import net.minecraft.util.math.AxisAlignedBB;
+
+public class Collider {
+   public static Optional<Vec3> collide(Direction.Axis axis, AxisAlignedBB collider, AxisAlignedBB colliding) {
+      double collision1 = colliding.func_197742_b(axis) - collider.func_197745_a(axis);
+      double collision2 = collider.func_197742_b(axis) - colliding.func_197745_a(axis);
+      if (!(collision1 <= (double)0.0F) && !(collision2 <= (double)0.0F)) {
+         Vec3 reaction = Vec3.fromAxis(axis);
+         if (collision1 < collision2) {
+            reaction.negate().mul(collision1);
+         } else {
+            reaction.mul(collision2);
+         }
+
+         return Optional.of(reaction);
+      } else {
+         return Optional.empty();
+      }
+   }
+
+   public static Optional<List<Vec3>> collideExceptAxis(@Nullable Direction.Axis axis, AxisAlignedBB collider, AxisAlignedBB colliding) {
+      List<Vec3> reactions = Lists.newArrayList();
+
+      for(Direction.Axis a : Axis.values()) {
+         if (a != axis) {
+            Optional<Vec3> reaction = collide(a, collider, colliding);
+            if (!reaction.isPresent()) {
+               return Optional.empty();
+            }
+
+            reactions.add(reaction.get());
+         }
+      }
+
+      return Optional.of(reactions);
+   }
+
+   public static boolean intersect(Direction.Axis axis, AxisAlignedBB collider, AxisAlignedBB colliding) {
+      return collider.func_197745_a(axis) < colliding.func_197742_b(axis) && collider.func_197742_b(axis) > colliding.func_197745_a(axis);
+   }
+
+   public static boolean intersectExceptAxis(@Nullable Direction.Axis axis, AxisAlignedBB collider, AxisAlignedBB colliding) {
+      for(Direction.Axis a : Axis.values()) {
+         if (a != axis && !intersect(a, collider, colliding)) {
+            return false;
+         }
+      }
+
+      return true;
+   }
+
+   public static boolean pointInBox(Direction.Axis axis, AxisAlignedBB collider, Vec3 point) {
+      return point.choose(axis) > collider.func_197745_a(axis) && point.choose(axis) < collider.func_197742_b(axis);
+   }
+
+   public static boolean pointInBoxExceptAxis(Direction.Axis axis, AxisAlignedBB collider, Vec3 point) {
+      for(Direction.Axis a : Axis.values()) {
+         if (a != axis && !pointInBox(a, collider, point)) {
+            return false;
+         }
+      }
+
+      return true;
+   }
+
+   public static List<List<Integer>> listCombinations(int base, int digits) {
+      List<List<Integer>> combinations = Lists.newArrayList();
+      recurseCombinations(combinations, base, digits, 0, new Stack());
+      return combinations;
+   }
+
+   private static void recurseCombinations(List<List<Integer>> combinations, int base, int digits, int depth, Stack<Integer> currentCombination) {
+      for(int i = 0; i < base; ++i) {
+         currentCombination.push(i);
+         if (depth < digits - 1) {
+            recurseCombinations(combinations, base, digits, depth + 1, currentCombination);
+         } else {
+            combinations.add(currentCombination);
+         }
+
+         currentCombination.pop();
+      }
+
+   }
+
+   public static <A, B, R> List<R> combineFunctions(A[] as, Function<A, B>[] fs, Function<B[], R> aggregator) {
+      List<List<Integer>> combinations = listCombinations(fs.length, as.length);
+      List<R> combined = Lists.newArrayList();
+
+      for(List<Integer> combination : combinations) {
+         B[] bs = (B[])(new Object[as.length]);
+
+         for(int j = 0; j < as.length; ++j) {
+            A a = (A)as[j];
+            B b = (B)fs[(Integer)combination.get(j)].apply(a);
+            bs[j] = b;
+         }
+
+         combined.add(aggregator.apply(bs));
+      }
+
+      return combined;
+   }
+
+   public static List<AABBVertex> getVertices(AxisAlignedBB box) {
+      return Lists.newArrayList(new AABBVertex[]{new AABBVertex(new Vec3(box.field_72340_a, box.field_72338_b, box.field_72339_c), AABBVertex.Corner.LEFT_DOWN_FORWARDS), new AABBVertex(new Vec3(box.field_72336_d, box.field_72338_b, box.field_72339_c), AABBVertex.Corner.RIGHT_DOWN_FORWARDS), new AABBVertex(new Vec3(box.field_72340_a, box.field_72337_e, box.field_72339_c), AABBVertex.Corner.LEFT_UP_FORWARDS), new AABBVertex(new Vec3(box.field_72336_d, box.field_72337_e, box.field_72339_c), AABBVertex.Corner.RIGHT_UP_FORWARDS), new AABBVertex(new Vec3(box.field_72340_a, box.field_72338_b, box.field_72334_f), AABBVertex.Corner.LEFT_DOWN_BACKWARDS), new AABBVertex(new Vec3(box.field_72336_d, box.field_72338_b, box.field_72334_f), AABBVertex.Corner.RIGHT_DOWN_BACKWARDS), new AABBVertex(new Vec3(box.field_72340_a, box.field_72337_e, box.field_72334_f), AABBVertex.Corner.LEFT_UP_BACKWARDS), new AABBVertex(new Vec3(box.field_72336_d, box.field_72337_e, box.field_72334_f), AABBVertex.Corner.RIGHT_UP_BACKWARDS)});
+   }
+
+   public static List<AABBVertex> getFaceCorners(Direction direction, AxisAlignedBB box) {
+      Direction.Axis axis = direction.func_176740_k();
+      return (List)getVertices(box).stream().filter((v) -> v.getPosition().choose(axis) == AABBUtil.getSide(box, direction)).collect(Collectors.toList());
+   }
+}
